@@ -18,8 +18,9 @@ function parameterCheck(params) {
     should.exist(params.required);
   });
 
-  it('should have a validator', function() {
-    should.exist(params.required);
+  it('should have a validate function', function() {
+    should.exist(params.validate);
+    _.isFunction(params.validate).should.be.true;
   });
 
   it('should have a default if not required', function() {
@@ -27,19 +28,35 @@ function parameterCheck(params) {
       should.exist(params.default);
     }
   });
+
+  it('should have a validation-passing default if any', function() {
+    if(params.default) {
+      params.validate(params.default).should.be.true;
+    }
+  });
 }
 
 function positiveIntegerCheck(field) {
   it('should not allow non-integer values', function() {
-    options[field].validator('blah').should.be.false
+    options[field].validate('blah').should.be.false
   });
 
   it('should not allow negative integers', function() {
-    options[field].validator(-1).should.be.false
+    options[field].validate(-1).should.be.false
   });
 
   it('should allow positive integers', function() {
-    options[field].validator(100).should.be.true
+    options[field].validate(100).should.be.true
+  });
+}
+
+function stringCheck(field) {
+  it('should not allow non-string values', function() {
+    options[field].validate(1).should.be.false
+  });
+
+  it('should allow strings', function() {
+    options[field].validate('blah').should.be.true
   });
 }
 
@@ -47,6 +64,7 @@ describe('options', function () {
 
   describe('host', function() {
     parameterCheck(options.host);
+    stringCheck('host');
   });
 
   describe('port', function() {
