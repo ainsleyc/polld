@@ -48,7 +48,7 @@ function start(taskfile, opts) {
 }
 
 program
-  .version('0.0.1')
+  .version('0.1.0')
   .usage('[options] <taskfile>')
   .option('-h, --host [host]', 'statsd host [localhost]', 'localhost')
   .option('-p, --port [port]', 'statsd port [8125]', 8125)
