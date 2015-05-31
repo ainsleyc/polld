@@ -1,7 +1,7 @@
 {
   "name": "polld",
   "description": "Polling daemon for StatsD",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/ainsleyc/polld.git",
   "bugs": "https://github.com/ainsleyc/polld/issues",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "commander": "2.8.1",
     "validate.js": "0.7.1",
     "request": "2.57.0",
-    "node-statsd": "0.1.1"
+    "node-statsd": "0.1.1",
+    "async": "1.0.0"
   },
   "devDependencies": {
     "gulp": "^3.8.8",
