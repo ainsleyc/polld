@@ -19,7 +19,8 @@
     "lodash": "3.9.3",
     "debug": "2.2.0",
     "commander": "2.8.1",
-    "validate.js": "0.7.1"
+    "validate.js": "0.7.1",
+    "request": "2.57.0"
   },
   "devDependencies": {
     "gulp": "^3.8.8",
