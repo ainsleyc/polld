@@ -15,19 +15,19 @@ function checkFailedExit(cmd) {
 describe('polld', function () {
 
   it('should fail for invalid port', function () {
-    checkFailedExit('node ./lib/polld.js -p blah ./example/task.js');
+    checkFailedExit('./bin/polld -p blah ./example/task.js');
   });
 
   it('should fail for invalid interval', function () {
-    checkFailedExit('node ./lib/polld.js -i blah ./example/task.js');
+    checkFailedExit('./bin/polld -i blah ./example/task.js');
   });
 
   it('should fail for missing taskfile', function () {
-    checkFailedExit('node ./lib/polld.js ../example/doesNotExist.js');
+    checkFailedExit('./bin/polld ../example/doesNotExist.js');
   });
 
   it('should fail for missing "task" function in taskfile', function () {
-    checkFailedExit('node ./lib/polld.js ./package.json');
+    checkFailedExit('./bin/polld ./package.json');
   });
 
 });
