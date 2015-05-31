@@ -14,7 +14,9 @@ $ npm install -g polld
 ```bash
 polld -h <statsd_host> -p <statsd_port> -i <interval> <taskfile>
 ```
-The taskfile is just a .js file that is run at each interval period. See /example for more details.
+The taskfile is just a .js file that is run at each interval period. Inside the taskfile a handle to an instance of [node-statsd](https://github.com/sivy/node-statsd) that you can use to send your metrics.
+
+See /example for more details.
 
 ## License
 
