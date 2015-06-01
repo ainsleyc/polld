@@ -11,7 +11,8 @@ var program = require('commander');
 var options = require('../lib/options');
 var taskRunner = require('../lib/taskRunner');
 
-var version = JSON.parse(fs.readFileSync('./package.json')).version;
+var packagePath = path.join(__dirname, '../package.json');
+var version = JSON.parse(fs.readFileSync(packagePath)).version;
 
 function failureExit(message) {
   console.log(message);
