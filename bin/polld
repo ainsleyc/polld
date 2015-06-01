@@ -3,6 +3,7 @@
 'use strict';
 
 var fs = require('fs');
+var path = require('path');
 
 var _ = require('lodash');
 var program = require('commander');
@@ -18,7 +19,11 @@ function failureExit(message) {
 }
 
 function getTaskPath(taskfile) {
-  return [process.cwd(), '/', taskfile].join('');
+  if (path.isAbsolute(taskfile)) {
+    return taskfile;
+  } else {
+    return path.join(process.cwd(), taskfile);
+  }
 }
 
 function invalidParamMessage(param, value) {
