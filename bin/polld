@@ -2,11 +2,15 @@
 
 'use strict';
 
+var fs = require('fs');
+
 var _ = require('lodash');
 var program = require('commander');
 
 var options = require('../lib/options');
 var taskRunner = require('../lib/taskRunner');
+
+var version = JSON.parse(fs.readFileSync('./package.json')).version;
 
 function failureExit(message) {
   console.log(message);
@@ -48,7 +52,7 @@ function start(taskfile, opts) {
 }
 
 program
-  .version('0.1.1')
+  .version(version)
   .usage('[options] <taskfile>')
   .option('-h, --host [host]', 'statsd host [localhost]', 'localhost')
   .option('-p, --port [port]', 'statsd port [8125]', 8125)
