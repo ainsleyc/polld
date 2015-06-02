@@ -44,7 +44,7 @@ function validateParams(taskfile, opts) {
   try {
     taskObject = require(getTaskPath(taskfile));
   } catch (e) {
-    failureExit(invalidParamMessage('taskfile', taskfile));
+    failureExit('Error in task file: "' + e + '"');
   }
 
   if (!_.isFunction(taskObject.task)) {
