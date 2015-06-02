@@ -16,7 +16,7 @@ polld -h <statsd_host> -p <statsd_port> -i <interval> <taskfile>
 ```
 The taskfile is just a .js file that is run at each interval period. Provided inside the taskfile is a handle to an instance of [node-statsd](https://github.com/sivy/node-statsd) to send metrics to the statsd server.
 
-See /example for more details.
+The taskfile can be written in js of coffee, See /example for more details.
 
 ## License
 
