@@ -29,5 +29,3 @@ Copyright (c) 2015 Ainsley Chong. Licensed under the MIT license.
 [travis-image]: https://travis-ci.org/ainsleyc/polld.svg?branch=master
 [daviddm-url]: https://david-dm.org/ainsleyc/polld.svg?theme=shields.io
 [daviddm-image]: https://david-dm.org/ainsleyc/polld
-[coveralls-url]: https://coveralls.io/r/ainsleyc/polld
-[coveralls-image]: https://coveralls.io/repos/ainsleyc/polld/badge.png
