@@ -1,7 +1,7 @@
 {
   "name": "polld",
   "description": "Polling daemon for StatsD",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/ainsleyc/polld.git",
   "bugs": "https://github.com/ainsleyc/polld/issues",
   "license": "MIT",
